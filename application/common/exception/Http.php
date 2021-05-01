@@ -23,8 +23,13 @@ class Http extends Handle
             return response($e->getMessage(), $e->getStatusCode());
         }
 
+
+        // return json('fasfas', 2000);
+
+        return json_encode('asdfasdfasd', JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);//exit();
+
         // 其他错误交给系统处理
-        return parent::render($e);
+//        return parent::render($e);
     }
 
 }
